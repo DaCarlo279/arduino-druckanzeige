@@ -3,6 +3,7 @@ Druckanzeige mit BMP280 und LCD
 
 ## Beschreibung
 Dieses Projekt verwendet einen **Arduino** und **BMP280-Sensoren**, um den Luftdruck zu messen und ihn auf einem **I2C LCD-Display** darzustellen. Es werden vier Sensoren über einen **TCA9548A I2C-Multiplexer** angesteuert. Die Druckwerte werden gelättet und auf einem Balken angezeigt.
+Verwendung findet das Projekt beim synchronisieren von Motorradvergasern.
 
 ## Funktionen:
 - Anzeige des Drucks von vier Sensoren.
