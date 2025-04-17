@@ -117,7 +117,9 @@ void loop() {
       String bar = createBar(avg, i);
       char buf[6];
       snprintf(buf, sizeof(buf), "%4.0f", avg);
-      lcd.print(bar + " " + buf);
+      lcd.print(bar);
+      lcd.print(" ");
+      lcd.print(buf);
     } else {
       lcd.print("Sensor ");
       lcd.print(i);
