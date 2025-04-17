@@ -3,7 +3,7 @@
 #include <LiquidCrystal_I2C.h>
 
 // LCD-Display (Adresse ggf. anpassen, z. B. 0x27 oder 0x3F)
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(0x25, 20, 4);
 
 // BMP280 Ã¼ber I2C-Multiplexer (TCA9548A)
 Adafruit_BMP280 bmp;
