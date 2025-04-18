@@ -80,36 +80,17 @@ void loop() {
   for (uint8_t i = 0; i < NUM_SENSORS; i++) {
     float pressure = readPressureFromSensor(i);
 
-    /* Debug: Wo schreiben wir hin?
-    Serial.print(">> LCD-Zeile ");
-    Serial.print(i);
-    Serial.print(" | Sensor ");
-    Serial.println(i);
-    */
-
     // Zeile löschen
     lcd.setCursor(0, i);
     lcd.print("                    ");
     lcd.setCursor(0, i);
 
-    /*
-    Serial.print("Sensor ");
-    Serial.print(i);
-    Serial.print(" | Rohdruck: ");
-    Serial.print(pressure);
-    Serial.print(" mbar");
-    */
-
     if (pressure > 0) {
       addToHistory(i, pressure);
       float avg = getAveragePressure(i);
 
-      /*Serial.print(" | Glatt: ");
-      Serial.println(avg);
-      */
-
       String bar = createBar(avg, i);
-
+      
       lcd.setCursor(0, i);
       lcd.print(bar);
       lcd.setCursor (14, i);
